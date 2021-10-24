@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<title>Rm 21</title>
+<link rel="shortcut icon" type="image/jpg" href="icons8-google-classroom-50.png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: turquoise;}
+#News {background-color:slateblue;}
+#Contact {background-color:darkkhaki;}
+#About {background-color:goldenrod;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Schedules</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h2>Welcome!</h2>
+  <!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="typeWriter()">Click Here to Begin</button>
+
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = '....We are the Running Mustangs of Room 21! We once again welcome you to Room 21 Website. Here you will find newsletters, important information, and homework schedules';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+</body>
+</html>
+<style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+    
+    .active, .accordion:hover {
+      background-color: #ccc; 
+    }
+    
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color:black;
+      overflow: hidden;
+    }
+    </style>
+    </head>
+    <body>
+    
+    <h2>Quick Links</h2>
+    <p>Press the Bar to Open the Link</p>
+    
+    <button class="accordion">Google Classroom</button>
+    <div class="panel">
+        <a href="https://classroom.google.com/u/1/c/MzgwODg0Mzk2ODI4">Visit Our Google Classroom!</a>
+    </div>
+    
+    <button class="accordion">Clever</button>
+    <div class="panel">
+        <a href="https://clever.com">Visit Clever to Access lots of Apps!</a>
+    </div>
+    
+    <button class="accordion">Fremont Benchmark Universe</button>
+    <div class="panel">
+        <a href="https://fremont.benchmarkuniverse.com/?">Visit Benchmark Universe to Read ebooks and finish tests!</a>
+    </div>
+    
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p></p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
